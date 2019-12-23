@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Run a multi-line script
+    - name: Run test
       env:
         DEPLOY_KEY_git_github_com_nazoking_test_private1_git: ${ secrets.p1 }
         DEPLOY_KEY_git_github_com_nazoking_test_private2_git: ${ secrets.p2 }
