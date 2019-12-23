@@ -1,4 +1,4 @@
-# git_multi_ssh.sh
+# git-multi-ssh.sh
 
 ssh deploy key manager for git command ( ex: for private submodules on github actions )
 
