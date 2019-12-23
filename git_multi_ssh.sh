@@ -1,5 +1,5 @@
 #!/bin/bash
-# github のデプロイキーを簡単に利用できるシェルスクリプト
+# ssh deploy key manager for git command ( ex: for private submodules )
 #
 # export GIT_SSH=git_multi_ssh.sh
 #
