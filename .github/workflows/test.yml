@@ -14,6 +14,8 @@ jobs:
         DEPLOY_KEY_git_github_com_nazoking_test_private1_git: ${ secrets.p1 }
         DEPLOY_KEY_git_github_com_nazoking_test_private2_git: ${ secrets.p2 }
       run: |
+        set -x
+        sed -i "bk" -e 's/set -e/set -ex/' git-multi-ssh.sh
         chmod +x git-multi-ssh.sh
         export GIT_SSH=$(pwd -)/git-multi-ssh.sh
         echo "private 1"
