@@ -20,7 +20,7 @@ if [ "${2%% *}" == "git-upload-pack" ];then
   set -- $2
   h="DEPLOY_KEY_$(normalize "${org[0]}")_$(normalize "$2")"
   if [ -n "${!h}" ];then
-    echo "use $h"
+    echo "use $h" >&2
     tmp=$(mktemp)
     echo "${!h}" > $tmp
     chmod 0600 $tmp
@@ -29,7 +29,7 @@ if [ "${2%% *}" == "git-upload-pack" ];then
     rm $tmp
     exit $ret
   else
-    echo "not found $h"
+    echo "not found $h" >&2
     ssh "${org[@]}"
   fi
 else
