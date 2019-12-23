@@ -8,13 +8,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
     - name: Run test
       env:
         DEPLOY_KEY_git_github_com_nazoking_test_private1_git: ${{ secrets.p1 }}
         DEPLOY_KEY_git_github_com_nazoking_test_private2_git: ${{ secrets.p2 }}
       run: |
         set -x
+        wget https://raw.githubusercontent.com/nazoking/git-multi-ssh.sh/master/git-multi-ssh.sh -O git-multi-ssh.sh
         chmod +x git-multi-ssh.sh
         export GIT_SSH=$(pwd -)/git-multi-ssh.sh
         echo "private 1"
