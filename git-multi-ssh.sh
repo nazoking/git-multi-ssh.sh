@@ -24,7 +24,7 @@ function mk_ssh_key
   echo "$tmp"
   trap "rm -f $tmp" EXIT
 }
-
+set -x
 org=("$@")
 if [ "${2%% *}" == "git-upload-pack" ];then
   set -- $2
