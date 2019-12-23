@@ -1,7 +1,7 @@
 #!/bin/bash
 # ssh deploy key manager for git command ( ex: for private submodules )
 #
-# export GIT_SSH=git_multi_ssh.sh
+# export GIT_SSH=git-multi-ssh.sh
 #
 # set environment valiable as `DEPLOY_KEY_[user_host]_[path]=[private-key]`
 #
